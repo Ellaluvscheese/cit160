@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +13,17 @@
             let total = 0; // initial price without discount
 
             // INPUT - find out total after discount
-            const Discount = document.getElementById ('Discount').value;
+            const Discount = document.getElementById('Discount').value;
 
             // PROCESSING - discount minus $100 
             total = Discount - 100;
 
             // OUTPUT - 
-            document.querySelector('#total').innerHTML = total;
+            document.querySelector('#total').innerHTML = 'Total ${total}';
         }
     </Script>
 </head>
+
 <body>
     <header>
         <h1>Vehicle Registration</h1>
@@ -38,11 +40,15 @@
         <label for="discount">Discount: </label>
         <input type="number" id="discount">
         <div class="processing"><button onclick="getTotalDue()">Compute Total</button></div>
-    </div> 
-    <p id='total'></p>
+
+        </div>
     </main>
+
+    <p id='#total'></p>
+
     <footer>©️2022 .:|:. Ella Galbraith .:|:. CIT 160 at BYU-Idaho</footer>
-   
-      
+
+
 </body>
+
 </html>
