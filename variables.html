@@ -7,7 +7,19 @@
     <title>CIT 160 - Ella Galbraith - Variables</title>
     <link rel="stylesheet" href="css/style.css">
     <Script>
-        
+        function getTotalDue() {
+            // DECLARATIONS - 
+            let total = 0; // initial price without discount
+
+            // INPUT - find out total after discount
+            const Discount = document.getElementById ('Discount').value;
+
+            // PROCESSING - discount minus $100 
+            total = Discount - 100;
+
+            // OUTPUT - 
+            document.querySelector('#total').innerHTML = total;
+        }
     </Script>
 </head>
 <body>
@@ -26,9 +38,11 @@
         <label for="discount">Discount: </label>
         <input type="number" id="discount">
         <div class="processing"><button onclick="getTotalDue()">Compute Total</button></div>
-    </div>
+    </div> 
+    <p id='total'></p>
     </main>
     <footer>©️2022 .:|:. Ella Galbraith .:|:. CIT 160 at BYU-Idaho</footer>
+   
       
 </body>
 </html>
