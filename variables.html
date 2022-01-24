@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIT 160 - Ella Galbraith - Variables</title>
     <link rel="stylesheet" href="css/style.css">
-    <Script>
-        function totaldue() {
+    <script>
+        function getTotalDue() {
             // DECLARATIONS - 
             let totaldue = 100; // initial price without discount
 
             // INPUT - find out total after discount
-            let discount = parseFloat (document.getElementById('#discount').value);
+            let discount = parseFloat(document.querySelector('#discount').value);
 
             // PROCESSING - discount minus $100 
             totaldue = totaldue - discount;
 
             // OUTPUT - 
-            document.querySelector('#totaldue').innerHTML = 'totaldue ${totaldue}';
+            document.querySelector('#totaldue').innerHTML = `Total Amount Due: $${totaldue.toFixed(2)}.`;
         }
-    </Script>
+    </script>
 </head>
 
 <body>
@@ -39,12 +39,12 @@
         <input type="text" id="model">
         <label for="discount">Discount: </label>
         <input type="number" id="discount">
-        <div class="processing"><button onclick="totaldue()">Compute Total</button></div>
+        <div class="processing"><button onclick="getTotalDue()">Compute Total</button></div>
+        <p id="totaldue"></p>
 
-        </div>
+
     </main>
 
-    <p id='#totaldue'></p>
 
     <footer>©️2022 .:|:. Ella Galbraith .:|:. CIT 160 at BYU-Idaho</footer>
 
